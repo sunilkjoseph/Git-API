@@ -1,13 +1,8 @@
-const API_TOKEN = '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';
-const USERNAME = 'sunilkjoseph';
+const USERNAME = 'sunilkjoseph'; // Replace with your GitHub username
 
 async function fetchProfile() {
     try {
-        const response = await fetch(`https://api.github.com/users/${USERNAME}`, {
-            headers: {
-                Authorization: `Bearer ${API_TOKEN}`,
-            },
-        });
+        const response = await fetch(`https://api.github.com/users/${USERNAME}`);
 
         if (!response.ok) {
             throw new Error('Failed to fetch profile data');
@@ -28,11 +23,7 @@ async function fetchProfile() {
 
 async function fetchRepos() {
     try {
-        const response = await fetch(`https://api.github.com/users/${USERNAME}/repos`, {
-            headers: {
-                Authorization: `Bearer ${API_TOKEN}`,
-            },
-        });
+        const response = await fetch(`https://api.github.com/users/${USERNAME}/repos`);
 
         if (!response.ok) {
             throw new Error('Failed to fetch repo data');
@@ -47,6 +38,7 @@ async function fetchRepos() {
             repoCard.innerHTML = `
                 <h3>${repo.name}</h3>
                 <p>${repo.description || 'No description available'}</p>
+                <p id="pub">${repo.private ? 'Private' : 'Public'}</p>
                 <a href="${repo.html_url}" class="repo-button" target="_blank">GitHub Repo</a>
             `;
             repoList.appendChild(repoCard);

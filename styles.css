@@ -76,6 +76,14 @@ header {
     color: #ccc; /* Light text color */
 }
 
+.repo-card #pub {
+    border: 2px solid #3a015c;
+    border-radius: 8px;
+    padding: 3px;
+    width: fit-content;
+    color: #cbbdff;
+}
+
 .repo-button {
     background-color: #8207c5; /* Purple button background color */
     color: #fff; /* Light text color */
