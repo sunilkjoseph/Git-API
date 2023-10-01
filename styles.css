@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #11001c; /* Dark background color */
+    color: #fff; /* Light text color */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #11001c;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+#profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+#profile-name {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#profile-bio {
+    font-size: 16px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #190028; /* Dark background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.repo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align the cards */
+}
+
+.repo-card {
+    border: 1px solid #3a015c; /* Dark border color */
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.33% - 20px);
+    background-color: #220135; /* Dark card background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.repo-card:hover {
+    box-shadow: 0 8px 12px rgba(128, 0, 128, 0.3); /* Purple shadow effect on hover */
+    transform: translateY(-5px);
+}
+
+.repo-card h3 {
+    font-size: 18px;
+    color: #0d00a4;
+}
+
+.repo-card p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #ccc; /* Light text color */
+}
+
+.repo-button {
+    background-color: #8207c5; /* Purple button background color */
+    color: #fff; /* Light text color */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    margin: 10px auto; /* Center-align the button */
+    text-align: center; /* Center-align the button text */
+    transition: background-color 0.3s ease;
+}
+
+.repo-button:hover {
+    background-color: #32cc53; /* Lighter purple on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .repo-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .repo-card {
+        width: 100%;
+    }
+}
